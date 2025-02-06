@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.spotlight {
+  position: absolute;
+  width: 200px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 80%);
+  filter: blur(50px);
+  transform-origin: top;
+}
