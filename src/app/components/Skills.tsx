@@ -14,40 +14,11 @@ const categories = [
   "Tools",
   "Programming Languages",
   "Frameworks",
+  "Database",
   "Other",
 ];
 
 const skills = [
-  {
-    name: "React",
-    image: "/react.png",
-    category: "Frameworks",
-    percentage: 90,
-  },
-  {
-    name: "Next.js",
-    image: "/nextjs.png",
-    category: "Frameworks",
-    percentage: 80,
-  },
-  {
-    name: "Node.js",
-    image: "/node.png",
-    category: "Frameworks",
-    percentage: 75,
-  },
-  {
-    name: "JavaScript",
-    image: "/js.png",
-    category: "Programming Languages",
-    percentage: 95,
-  },
-  {
-    name: "Python",
-    image: "/python.png",
-    category: "Programming Languages",
-    percentage: 70,
-  },
   {
     name: "PHP",
     image: "/php.png",
@@ -60,7 +31,6 @@ const skills = [
     category: "Frameworks",
     percentage: 80,
   },
-  { name: "Git", image: "/git.png", category: "Tools", percentage: 85 },
   {
     name: "Tailwind CSS",
     image: "/tailwindcss.png",
@@ -68,11 +38,60 @@ const skills = [
     percentage: 90,
   },
   {
+    name: "TypeScript",
+    image: "/typescript.png",
+    category: "Programming Languages",
+    percentage: 80,
+  },
+  {
+    name: "JavaScript",
+    image: "/js.png",
+    category: "Programming Languages",
+    percentage: 95,
+  },
+  {
     name: "Alpine.js",
     image: "/alpinejs.png",
     category: "Frameworks",
     percentage: 70,
   },
+  {
+    name: "SQLite",
+    image: "/sqlite.png",
+    category: "Database",
+    percentage: 70,
+  },
+  { name: "mysql", image: "/mysql.png", category: "Database", percentage: 70 },
+
+  {
+    name: "Next.js",
+    image: "/nextjs.png",
+    category: "Frameworks",
+    percentage: 80,
+  },
+  {
+    name: "React",
+    image: "/react.png",
+    category: "Frameworks",
+    percentage: 90,
+  },
+
+  {
+    name: "Node.js",
+    image: "/node.png",
+    category: "Frameworks",
+    percentage: 75,
+  },
+
+  {
+    name: "Python",
+    image: "/python.png",
+    category: "Programming Languages",
+    percentage: 70,
+  },
+
+  { name: "Git", image: "/git.png", category: "Tools", percentage: 85 },
+
   {
     name: "HTML",
     image: "/html.png",
@@ -85,12 +104,7 @@ const skills = [
     category: "Programming Languages",
     percentage: 85,
   },
-  {
-    name: "TypeScript",
-    image: "/typescript.png",
-    category: "Programming Languages",
-    percentage: 80,
-  },
+
   { name: "npm", image: "/npm.png", category: "Tools", percentage: 75 },
   { name: "nmap", image: "/nmap.png", category: "Tools", percentage: 70 },
 ];
@@ -122,7 +136,7 @@ export default function Skills({ scrolling }: SkillsProps) {
   return (
     <motion.section
       id="skills"
-      className="py-6 text-white relative z-10 bg-black"
+      className="py-6 text-white relative z-10 "
       initial="show"
       animate={isScrolledDown ? "show" : isScrolledBeyond ? "hidden" : "hidden"}
       exit={isScrolledUp ? "show" : "hidden"}
@@ -156,10 +170,10 @@ export default function Skills({ scrolling }: SkillsProps) {
         {filteredSkills.map((skill, index) => (
           <motion.div
             key={index}
-            className="flex flex-col items-center bg-white p-4 rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
+            className="flex flex-col items-center bg-black border border-white p-4 rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
             variants={fadeFromBottom}
           >
-            <motion.div className="flex items-center gap-3 p-3 rounded-lg bg-gray-100 shadow">
+            <motion.div className="flex items-center gap-3 p-3 rounded-lg bg-black shadow">
               {skill.image && (
                 <Image
                   src={skill.image}
@@ -171,18 +185,18 @@ export default function Skills({ scrolling }: SkillsProps) {
               )}
 
               <div className="flex flex-col">
-                <motion.h3 className="text-sm font-semibold text-gray-800">
+                <motion.h3 className="text-sm font-semibold text-gray-100">
                   {skill.name}
                 </motion.h3>
-                <motion.p className="text-xs text-gray-600">
+                <motion.p className="text-xs text-gray-200 ">
                   {getSkillLevel(skill.percentage)}
                 </motion.p>
               </div>
             </motion.div>
 
-            <motion.div className="w-full bg-white h-2 rounded-full mt-2 overflow-hidden">
+            <motion.div className="w-full bg-black h-2 rounded-full mt-2 overflow-hidden border border-white">
               <motion.div
-                className="h-full bg-black"
+                className="h-full bg-white border border-white"
                 style={{ width: `${skill.percentage}%` }}
                 initial={{ width: 0 }}
                 animate={{ width: `${skill.percentage}%` }}
