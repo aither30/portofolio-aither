@@ -25,10 +25,10 @@ export default function Navbar({ scrolling }: AboutProps) {
 
   return (
     <motion.nav
-      className="bg-black py-4 mx-auto h-16 flex justify-between items-center z-10 relative"
+      className="bg-black py-4 mx-auto h-20 flex justify-between items-center z-10 relative"
       initial="hidden"
       animate={scrolling > 300 ? "hidden" : "show"}
-      variants={fadeFromUp} // Apply fade animation to entire navbar
+      variants={fadeFromUp}
       transition={{ staggerChildren: 0.2 }}
     >
       {/* Logo Section */}
@@ -63,6 +63,14 @@ export default function Navbar({ scrolling }: AboutProps) {
               className="hover:text-gray-400 text-white text-xl"
             >
               Contact
+            </Link>
+          </motion.div>
+          <motion.div variants={fadeFromUp}>
+            <Link
+              href="#about"
+              className="hover:text-gray-400 text-white text-xl"
+            >
+              About
             </Link>
           </motion.div>
         </motion.ul>

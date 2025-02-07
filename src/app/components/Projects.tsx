@@ -3,14 +3,14 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { FiExternalLink } from "react-icons/fi"; 
+import { FiExternalLink } from "react-icons/fi";
 import { fadeFromBottom } from "../variants";
 
 interface AboutProps {
   scrolling: number;
 }
 
-const categories = ["All", "Fullstack", "Networking"]; 
+const categories = ["All", "Fullstack", "Networking"];
 
 const projects = [
   {
@@ -78,7 +78,7 @@ export default function Projects({ scrolling }: AboutProps) {
       : projects.filter((project) => project.category === selectedCategory);
 
   const thresholdStart = 700;
-  const thresholdEnd = 1400;
+  const thresholdEnd = 1500;
 
   const isScrolledUp = scrolling <= thresholdStart;
   const isScrolledDown = scrolling > thresholdStart && scrolling < thresholdEnd;
@@ -91,7 +91,7 @@ export default function Projects({ scrolling }: AboutProps) {
       initial="show"
       animate={isScrolledDown ? "show" : isScrolledBeyond ? "hidden" : "hidden"} // Berbalik animasi
       exit={isScrolledUp ? "show" : "hidden"} // Berbalik animasi ketika scroll ke atas
-      transition={{ staggerChildren: 0.3 }}
+      transition={{ staggerChildren: 0.2 }}
     >
       <motion.div className="px-12">
         <motion.h2

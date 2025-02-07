@@ -15,7 +15,7 @@ interface AboutProps {
 
 export default function About({ scrolling }: AboutProps) {
   const thresholdStart = 175;
-  const thresholdEnd = 700;
+  const thresholdEnd = 900;
 
   const isScrolledUp = scrolling <= thresholdStart;
   const isScrolledDown = scrolling > thresholdStart && scrolling < thresholdEnd;
@@ -23,7 +23,7 @@ export default function About({ scrolling }: AboutProps) {
 
   return (
     <motion.section
-      id="About"
+      id="about"
       className="relative py-24 text-white flex items-center justify-between px-16 overflow-hidden"
       initial="show"
       animate={isScrolledDown ? "show" : isScrolledBeyond ? "hidden" : "hidden"} // Berbalik animasi
