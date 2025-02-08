@@ -11,10 +11,10 @@ interface SkillsProps {
 
 const categories = [
   "All",
-  "Tools",
   "Programming Languages",
   "Frameworks",
   "Database",
+  "Tools",
   "Other",
 ];
 
@@ -23,7 +23,7 @@ const skills = [
     name: "PHP",
     image: "/php.png",
     category: "Programming Languages",
-    percentage: 75,
+    percentage: 80,
   },
   {
     name: "Laravel",
@@ -41,31 +41,31 @@ const skills = [
     name: "TypeScript",
     image: "/typescript.png",
     category: "Programming Languages",
-    percentage: 80,
+    percentage: 65,
   },
   {
     name: "JavaScript",
     image: "/js.png",
     category: "Programming Languages",
-    percentage: 95,
+    percentage: 65,
   },
   {
     name: "Alpine.js",
     image: "/alpinejs.png",
     category: "Frameworks",
-    percentage: 70,
+    percentage: 50,
   },
   {
     name: "SQLite",
     image: "/sqlite.png",
     category: "Database",
-    percentage: 70,
+    percentage: 80,
   },
-  { name: "mysql", image: "/mysql.png", category: "Database", percentage: 70 },
+  { name: "mysql", image: "/mysql.png", category: "Database", percentage: 80 },
 
   {
     name: "Next.js",
-    image: "/nextjs.png",
+    image: "/next.jpeg",
     category: "Frameworks",
     percentage: 80,
   },
@@ -73,21 +73,21 @@ const skills = [
     name: "React",
     image: "/react.png",
     category: "Frameworks",
-    percentage: 90,
+    percentage: 60,
   },
 
   {
     name: "Node.js",
     image: "/node.png",
     category: "Frameworks",
-    percentage: 75,
+    percentage: 90,
   },
 
   {
     name: "Python",
     image: "/python.png",
     category: "Programming Languages",
-    percentage: 70,
+    percentage: 40,
   },
 
   { name: "Git", image: "/git.png", category: "Tools", percentage: 85 },
@@ -96,7 +96,7 @@ const skills = [
     name: "HTML",
     image: "/html.png",
     category: "Programming Languages",
-    percentage: 90,
+    percentage: 95,
   },
   {
     name: "CSS",
@@ -106,7 +106,19 @@ const skills = [
   },
 
   { name: "npm", image: "/npm.png", category: "Tools", percentage: 75 },
-  { name: "nmap", image: "/nmap.png", category: "Tools", percentage: 70 },
+  { name: "nmap", image: "/nmap.png", category: "Tools", percentage: 60 },
+  {
+    name: "Visual Studio Code",
+    image: "/vscode.png",
+    category: "Tools",
+    percentage: 90,
+  },
+  {
+    name: "GitHub",
+    image: "/github.png",
+    category: "Tools",
+    percentage: 80,
+  },
 ];
 
 const getSkillLevel = (percentage: number) => {

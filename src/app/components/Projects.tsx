@@ -15,7 +15,7 @@ const categories = ["All", "Fullstack", "Networking"];
 const projects = [
   {
     title: "MyPlanEt - Event Planning AI",
-    image: "/project1.png",
+    image: "/myplanet.png",
     link: "#",
     category: "Fullstack",
   },
@@ -23,47 +23,17 @@ const projects = [
     title: "SAWARGA - Wisata Desa Wakap",
     image: "/sawarga.png",
     link: "#",
-    category: "Networking",
+    category: "fuullstack",
   },
   {
-    title: "Project 3",
-    image: "/project3.png",
-    link: "#",
-    category: "Networking",
-  },
-  {
-    title: "Project 4",
-    image: "/project4.png",
+    title: "Steganography",
+    image: "/steganography.png",
     link: "#",
     category: "Fullstack",
   },
   {
-    title: "Project 5",
-    image: "/project5.png",
-    link: "#",
-    category: "Fullstack",
-  },
-  {
-    title: "Project 6",
-    image: "/project6.png",
-    link: "#",
-    category: "Networking",
-  },
-  {
-    title: "Project 7",
-    image: "/project7.png",
-    link: "#",
-    category: "Fullstack",
-  },
-  {
-    title: "Project 8",
-    image: "/project8.png",
-    link: "#",
-    category: "Networking",
-  },
-  {
-    title: "Project 9",
-    image: "/project9.png",
+    title: "Digital Signature",
+    image: "/digital-signature.png",
     link: "#",
     category: "Fullstack",
   },
@@ -78,7 +48,7 @@ export default function Projects({ scrolling }: AboutProps) {
       : projects.filter((project) => project.category === selectedCategory);
 
   const thresholdStart = 700;
-  const thresholdEnd = 1500;
+  const thresholdEnd = 1400;
 
   const isScrolledUp = scrolling <= thresholdStart;
   const isScrolledDown = scrolling > thresholdStart && scrolling < thresholdEnd;
@@ -91,7 +61,7 @@ export default function Projects({ scrolling }: AboutProps) {
       initial="show"
       animate={isScrolledDown ? "show" : isScrolledBeyond ? "hidden" : "hidden"} // Berbalik animasi
       exit={isScrolledUp ? "show" : "hidden"} // Berbalik animasi ketika scroll ke atas
-      transition={{ staggerChildren: 0.2 }}
+      transition={{ staggerChildren: 0.3 }}
     >
       <motion.div className="px-12">
         <motion.h2
@@ -121,11 +91,11 @@ export default function Projects({ scrolling }: AboutProps) {
       </motion.div>
 
       {/* Menampilkan proyek */}
-      <motion.div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-8 z-10">
+      <motion.div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8 px-8 z-10">
         {filteredProjects.map((project, index) => (
           <motion.div
             key={index}
-            className="relative bg-white text-black rounded-lg shadow-lg overflow-hidden transition-all transform hover:scale-105 hover:shadow-2xl group h-40 z-10"
+            className="relative bg-white text-black rounded-lg shadow-lg overflow-hidden transition-all transform hover:scale-105 hover:shadow-2xl group h-64 z-10"
             variants={fadeFromBottom}
           >
             {/* Gambar */}
