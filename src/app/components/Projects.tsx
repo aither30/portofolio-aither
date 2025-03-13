@@ -61,7 +61,7 @@ export default function Projects({ scrolling }: AboutProps) {
       initial="show"
       animate={isScrolledDown ? "show" : isScrolledBeyond ? "hidden" : "hidden"} // Berbalik animasi
       exit={isScrolledUp ? "show" : "hidden"} // Berbalik animasi ketika scroll ke atas
-      transition={{ staggerChildren: 0.3 }}
+      transition={{ staggerChildren: 0.2 }}
     >
       <motion.div className="px-12">
         <motion.h2

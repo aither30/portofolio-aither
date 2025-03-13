@@ -152,7 +152,7 @@ export default function Skills({ scrolling }: SkillsProps) {
       initial="show"
       animate={isScrolledDown ? "show" : isScrolledBeyond ? "hidden" : "hidden"}
       exit={isScrolledUp ? "show" : "hidden"}
-      transition={{ staggerChildren: 0.2 }}
+      transition={{ staggerChildren: 0.1 }}
     >
       <motion.h2
         className="text-3xl font-bold text-center mb-6"

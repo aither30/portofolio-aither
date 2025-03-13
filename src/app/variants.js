@@ -1,7 +1,7 @@
 export const fadeFromLeft = {
   hidden: {
     opacity: 0,
-    x: -100,
+    x: 0,
     transition: { duration: 0.7, ease: "easeInOut" },
   },
   show: {
@@ -14,7 +14,7 @@ export const fadeFromLeft = {
 export const fadeFromRight = {
   hidden: {
     opacity: 0,
-    x: 100,
+    x: 0,
     transition: { duration: 0.7, ease: "easeInOut" },
   },
   show: {
@@ -27,7 +27,7 @@ export const fadeFromRight = {
 export const fadeFromBottom = {
   hidden: {
     opacity: 0,
-    y: 100,
+    y: 0,
     transition: { duration: 0.7, ease: "easeInOut" },
   },
   show: {
@@ -40,7 +40,7 @@ export const fadeFromBottom = {
 export const fadeFromUp = {
   hidden: {
     opacity: 0,
-    y: -100,
+    y: 0,
     transition: { duration: 0.7, ease: "easeInOut" },
   },
   show: {
