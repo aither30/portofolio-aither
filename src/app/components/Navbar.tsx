@@ -3,24 +3,29 @@
 import { motion } from "framer-motion";
 import { fadeFromUp } from "../variants";
 import Link from "next/link";
-import {
-  FaFacebook,
-  FaInstagram,
-  FaLinkedin,
-  FaGithub,
-  FaTiktok,
-} from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaGithub, FaTiktok } from "react-icons/fa";
 
 interface AboutProps {
   scrolling: number; // Pastikan 'scrolling' adalah number
 }
 export default function Navbar({ scrolling }: AboutProps) {
   const socialLinks = [
-    { name: "Facebook", icon: <FaFacebook />, href: "#" },
-    { name: "Instagram", icon: <FaInstagram />, href: "#" },
-    { name: "LinkedIn", icon: <FaLinkedin />, href: "#" },
-    { name: "GitHub", icon: <FaGithub />, href: "#" },
-    { name: "Tiktok", icon: <FaTiktok />, href: "#" },
+    {
+      name: "Instagram",
+      icon: <FaInstagram />,
+      href: "https://www.instagram.com/appleaither?igsh=cGpiaHQ4aHdxZnVo",
+    },
+    {
+      name: "LinkedIn",
+      icon: <FaLinkedin />,
+      href: "https://www.linkedin.com/in/alpi-darul-hakim-331408308?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    },
+    { name: "GitHub", icon: <FaGithub />, href: "https://github.com/aither30" },
+    {
+      name: "Tiktok",
+      icon: <FaTiktok />,
+      href: "https://www.tiktok.com/@osecret_?_t=ZS-8vkQENo3pho&_r=1",
+    },
   ];
 
   return (

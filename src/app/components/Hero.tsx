@@ -4,13 +4,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { fadeFromLeft, fadeFromRight } from "../variants";
 import Image from "next/image";
-import {
-  FaFacebook,
-  FaInstagram,
-  FaLinkedin,
-  FaGithub,
-  FaTiktok,
-} from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaGithub, FaTiktok } from "react-icons/fa";
 
 const words = [
   "As a Fullstack Developer, I build web applications that prioritize user experience, performance, and scalability. I'm passionate about designing intuitive and efficient solutions, handling both frontend and backend development. Check out my portfolio to see how I bring these ideas to life!",
@@ -53,11 +47,22 @@ export default function Hero({ scrolling }: AboutProps) {
   }, [text, isDeleting, index]);
 
   const socialLinks = [
-    { name: "Facebook", icon: <FaFacebook />, href: "#" },
-    { name: "Instagram", icon: <FaInstagram />, href: "#" },
-    { name: "LinkedIn", icon: <FaLinkedin />, href: "#" },
-    { name: "GitHub", icon: <FaGithub />, href: "#" },
-    { name: "Tiktok", icon: <FaTiktok />, href: "#" },
+    {
+      name: "Instagram",
+      icon: <FaInstagram />,
+      href: "https://www.instagram.com/appleaither?igsh=cGpiaHQ4aHdxZnVo",
+    },
+    {
+      name: "LinkedIn",
+      icon: <FaLinkedin />,
+      href: "https://www.linkedin.com/in/alpi-darul-hakim-331408308?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    },
+    { name: "GitHub", icon: <FaGithub />, href: "https://github.com/aither30" },
+    {
+      name: "Tiktok",
+      icon: <FaTiktok />,
+      href: "https://www.tiktok.com/@osecret_?_t=ZS-8vkQENo3pho&_r=1",
+    },
   ];
 
   return (
