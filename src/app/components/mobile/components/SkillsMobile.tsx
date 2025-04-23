@@ -26,6 +26,12 @@ const skills = [
     percentage: 80,
   },
   {
+    name: "Yii",
+    image: "/yii.png",
+    category: "Frameworks",
+    percentage: 60,
+  },
+  {
     name: "Tailwind CSS",
     image: "/tailwindcss.png",
     category: "Frameworks",
@@ -55,6 +61,12 @@ const skills = [
     category: "Database",
     percentage: 80,
   },
+  {
+    name: "postgreSQL",
+    image: "/postgree.png",
+    category: "Database",
+    percentage: 60,
+  },
   { name: "mysql", image: "/mysql.png", category: "Database", percentage: 80 },
   {
     name: "Next.js",
@@ -78,19 +90,19 @@ const skills = [
     name: "Python",
     image: "/python.png",
     category: "Programming Languages",
-    percentage: 40,
+    percentage: 20,
   },
   { name: "Git", image: "/git.png", category: "Tools", percentage: 85 },
   {
     name: "HTML",
     image: "/html.png",
-    category: "Programming Languages",
+    category: "Other",
     percentage: 95,
   },
   {
     name: "CSS",
     image: "/css.png",
-    category: "Programming Languages",
+    category: "Other",
     percentage: 85,
   },
   { name: "npm", image: "/npm.png", category: "Tools", percentage: 75 },
@@ -101,7 +113,6 @@ const skills = [
     category: "Tools",
     percentage: 90,
   },
-  { name: "GitHub", image: "/github.png", category: "Tools", percentage: 80 },
 ];
 
 const getSkillLevel = (percentage: number) => {
